@@ -1,33 +1,116 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset margin and padding */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
+/* Define default light mode variables */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --header-bg: #282c34;
+    --nav-link-color: #61dafb;
+    --nav-link-hover-color: #21a1f1;
+    --project-bg: #fff;
+    --footer-bg: #282c34;
+}
+
+/* Define dark mode variables */
+[data-theme='dark'] {
+    --bg-color: #181818;
+    --text-color: #f9f9f9;
+    --header-bg: #1e1e1e;
+    --nav-link-color: #90caf9;
+    --nav-link-hover-color: #64b5f6;
+    --project-bg: #242424;
+    --footer-bg: #1e1e1e;
+}
+
+/* Body and Font */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 50px 0;
+    background-color: var(--header-bg);
+    color: white;
+    padding: 40px 0;
     text-align: center;
+    position: relative;
 }
 
-header h1 {
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: var(--nav-link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--nav-link-hover-color);
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text h1 {
     font-size: 48px;
-    margin: 0;
 }
 
-header p {
+.intro-text p {
     font-size: 24px;
-    margin: 10px 0;
+    color: var(--nav-link-color);
 }
 
+/* Container */
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+/* About Section */
 section {
     padding: 50px 0;
 }
@@ -35,18 +118,101 @@ section {
 h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .project {
-    background-color: #fff;
+    background-color: var(--project-bg);
     padding: 20px;
-    margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-icon {
+    font-size: 48px;
+    color: var(--nav-link-color);
+    margin-bottom: 10px;
+}
+
+/* Coding Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.intro-text h1::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--nav-link-color);
+    animation: blink 1s infinite;
+}
+
+.intro-text p {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--nav-link-color);
+    width: 0;
+    animation: typing 4s steps(40, end) forwards, blink 1s infinite;
+}
+
+/* Contact Section */
+a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--nav-link-hover-color);
+}
+
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--footer-bg);
+    color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 24px; /* Adjust icon size */
 }
