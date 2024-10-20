@@ -11,22 +11,28 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </div>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="theme-toggle" onclick="toggleTheme()">
-            <i id="theme-icon" class="fas fa-sun"></i>
-        </div>
         <div class="container">
             <div class="intro">
                 <img src="images/your-photo.jpg" alt="Isuru Bandara" class="profile-photo">
                 <div class="intro-text">
-                    <h1>Hello, I'm Isuru Bandara</h1>
-                    <p>Software Engineer | Full Stack Developer</p>
+                    <h1>Isuru Bandara</h1>
+                    <p>Hello, I'm </p>
+                    <p id="role-text"></p>
                 </div>
             </div>
         </div>
@@ -36,7 +42,11 @@
         <div class="container">
             <h2>About Me</h2>
             <p>
-                I am a software engineer with experience in Angular, .NET Core, and real-time data processing with SignalR. I enjoy working on full-stack projects and constantly learning new technologies to improve my skills.
+                I am a Software Engineer with 2 years plus hands-on experience in designing,
+developing, and deploying robust software applications. Expertise in Angular,
+ASP.NET, and C#, with a strong focus on writing scalable and secure code.
+Adept at solving complex problems and delivering high-quality solutions
+within tight deadlines.
             </p>
         </div>
     </section>
@@ -65,29 +75,91 @@
         </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">
-                    <i class="fab fa-js-square skill-icon"></i>
-                    <p>JavaScript</p>
+    <section id="experience">
+    <div class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="year">2022 - Present</div>
+                <div class="content">
+                    <h3>Job Title 1</h3>
+                    <p>Company Name</p>
+                    <p>Responsibilities and achievements...</p>
                 </div>
-                <div class="skill">
-                    <i class="fab fa-js-square skill-icon"></i>
-                    <p>TypeScript</p>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-react skill-icon"></i>
-                    <p>React</p>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-angular skill-icon"></i>
-                    <p>Angular</p>
+            </div>
+            <div class="timeline-item right">
+                <div class="year">2021</div>
+                <div class="content">
+                    <h3>Job Title 2</h3>
+                    <p>Company Name</p>
+                    <p>Responsibilities and achievements...</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section id="education">
+    <div class="container">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="year">2018 - 2021</div>
+                <div class="content">
+                    <h3>Degree 1</h3>
+                    <p>Institution Name</p>
+                    <p>Key subjects and projects...</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="year">2016 - 2018</div>
+                <div class="content">
+                    <h3>Degree 2</h3>
+                    <p>Institution Name</p>
+                    <p>Key subjects and projects...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <i class="fab fa-js-square skill-icon"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-angular skill-icon"></i>
+                <p>Angular</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-react skill-icon"></i>
+                <p>React</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-node skill-icon"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-camera-retro skill-icon"></i> <!-- You can add an appropriate icon here -->
+                <p>ASP.NET</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-php skill-icon"></i>
+                <p>PHP</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-database skill-icon"></i> <!-- You can use a database icon for SQL -->
+                <p>SQL</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section id="contact">
         <div class="container">
@@ -97,22 +169,57 @@
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Isuru Bandara. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Isuru Bandara. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Default to light mode
-        document.documentElement.setAttribute('data-theme', 'light');
+        function toggleNav() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
 
         function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            const themeIcon = document.getElementById('theme-icon');
-            themeIcon.className = newTheme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+            const theme = document.documentElement;
+            if (theme.getAttribute('data-theme') === 'dark') {
+                theme.setAttribute('data-theme', 'light');
+                document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun');
+            } else {
+                theme.setAttribute('data-theme', 'dark');
+                document.getElementById('theme-icon').classList.replace('fa-sun', 'fa-moon');
+            }
         }
     </script>
+
+    <script>
+    const roles = ["Software Engineer", "Software Developer", "Designer", "Frontend Developer", "Backend Developer", "Fullstack Engineer"];
+    const roleText = document.getElementById("role-text");
+    let index = 0; // Start with the first role
+    let charIndex = 0; // Start typing the first character
+
+    function type() {
+        if (charIndex < roles[index].length) {
+            roleText.textContent += roles[index].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 100); // Adjust typing speed (100ms per character)
+        } else {
+            setTimeout(deleteText, 1000); // Pause before deleting
+        }
+    }
+
+    function deleteText() {
+        if (charIndex > 0) {
+            roleText.textContent = roles[index].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(deleteText, 100); // Adjust deleting speed (100ms per character)
+        } else {
+            index = (index + 1) % roles.length; // Move to the next role
+            setTimeout(type, 500); // Pause before starting to type again
+        }
+    }
+
+    roleText.classList.add("typing"); // Add typing class for cursor effect
+    type(); // Start typing effect
+</script>
+
 </body>
 </html>
