@@ -1,227 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Isuru's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="theme-toggle" onclick="toggleTheme()">
-                <i id="theme-icon" class="fas fa-sun"></i>
-            </div>
-            <div class="nav-toggle" onclick="toggleNav()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <div class="intro">
-                <!-- <img src="https://drive.google.com/uc?export=view&id=1p8t8iNwkomGF482HElaej9FbxgOe8gI8" alt="Isuru Bandara" class="profile-photo"> -->
-                <img src="https://i.imgur.com/AfG17bx.jpg" alt="Isuru Bandara" class="profile-photo">
 
-                <div class="intro-text">
-                    <h1>Isuru Bandara</h1>
-                    <p>Hello World, I'm a</p>
-                    <p id="role-text"></p>
-                </div>
-            </div>
-        </div>
+<body class="light">
+
+    <!-- Navbar Section -->
+    <header class="fixed top-0 left-0 w-full p-5 flex justify-between items-center shadow z-50">
+        <nav id="navbar" class="space-x-5">
+            <a href="#about" class="navbar-link text-lg text-black dark:text-white">About</a>
+            <a href="#skills" class="navbar-link text-lg text-black dark:text-white">Skills</a>
+            <a href="#experience" class="navbar-link text-lg text-black dark:text-white">Experience</a>
+            <a href="#education" class="navbar-link text-lg text-black dark:text-white">Education</a>
+            <a href="#projects" class="navbar-link text-lg text-black dark:text-white">Projects</a>
+            <a href="#contact" class="navbar-link text-lg text-black dark:text-white">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="p-2 text-black dark:text-white">
+            <i class="fas fa-moon"></i>
+        </button>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I am a Software Engineer with 2 years plus hands-on experience in designing,
-developing, and deploying robust software applications. Expertise in Angular,
-ASP.NET, and C#, with a strong focus on writing scalable and secure code.
-Adept at solving complex problems and delivering high-quality solutions
-within tight deadlines.
-            </p>
-        </div>
+    <!-- Hero Section with Particle Effect -->
+    <section class="hero-bg flex flex-col justify-center items-center text-center relative">
+        <h1 class="text-5xl mb-2 text-white">Hello, I'm Isuru Bandara</h1>
+        <h1 class="text-4xl mb-2 text-white">Software Engineer</h1>
+        <p class="mb-5 text-white">Expert in Angular, .NET, C# and Full-stack development.</p>
+        <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover-effect">Download Resume</a>
+        <!-- Particle Effect Container -->
+        <div id="particles-js"></div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>Virtual Academy Cloud (VAC)</h3>
-                    <p>Developed an exam system using SignalR for real-time data processing and implemented it under a tight deadline.</p>
+    <!-- About Section -->
+    <section id="about" class="top-margin bg-light-gray py-10">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center light-theme-text dark-theme-text">> About Me</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <!-- Photo Section -->
+                <div class="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-teal-400 to-blue-500 hover:scale-105 transition-all duration-300 ease-in-out">
+                    <img src="https://i.imgur.com/AfG17bx.jpg" alt="Your Photo" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300 ease-in-out" />
                 </div>
-                <div class="project">
-                    <h3>Department Employee Management System</h3>
-                    <p>A full-stack web application using React, .NET Core, and SQL Server for managing departments and employees.</p>
-                </div>
-                <div class="project">
-                    <h3>Sponsorships Management System</h3>
-                    <p>Angular/Nestjs/MySQL</p>
-                </div>
-                <div class="project">
-                    <h3>E-Commerce Platform</h3>
-                    <p>Developed a full-stack e-commerce platform using the MERN stack for online shopping experiences.</p>
+                
+                <!-- Text Section -->
+                <div class="text-center md:text-left">
+                    <p class="section-text light-theme-text dark-theme-text">
+                        I am a Software Engineer with over 2 years of experience in designing, developing, and deploying scalable software applications.
+                        Skilled in Angular, ASP.NET, and C#, I focus on writing secure and maintainable code. Known for my ability to solve complex challenges 
+                        and deliver high-quality solutions within strict deadlines.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience">
-    <div class="container">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="year">2022 - Present</div>
-                <div class="content">
-                    <h3>Job Title 1</h3>
-                    <p>Company Name</p>
-                    <p>Responsibilities and achievements...</p>
-                </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="year">2021</div>
-                <div class="content">
-                    <h3>Job Title 2</h3>
-                    <p>Company Name</p>
-                    <p>Responsibilities and achievements...</p>
-                </div>
-            </div>
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light-gray">
+    <h2 class="section-title light-theme-text dark-theme-text">>Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="hover-effect text-center">
+            <i class="fab fa-angular text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">Angular</p>
+        </div>
+        <div class="hover-effect text-center">
+            <i class="fab fa-js-square text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">JavaScript</p>
+        </div>
+        <div class="hover-effect text-center">
+            <i class="fab fa-react text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">React</p>
+        </div>
+        <div class="hover-effect text-center">
+            <i class="fab fa-node text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">NestJS</p>
+        </div>
+        <div class="hover-effect text-center">
+            <i class="fab fa-html5 text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">HTML</p>
+        </div>
+        <div class="hover-effect text-center">
+            <i class="fab fa-microsoft text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">.NET</p>
+        </div>
+        <div class="hover-effect text-center">
+            <i class="fas fa-database text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">MySQL</p>
+        </div>
+        <div class="hover-effect text-center">
+            <i class="fab fa-php text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">PHP</p>
+        </div>
+        <div class="hover-effect text-center">
+            <i class="fas fa-cogs text-4xl"></i>
+            <p class="section-text light-theme-text dark-theme-text">C#</p>
         </div>
     </div>
 </section>
 
-<section id="education">
-    <div class="container">
-        <h2>Education</h2>
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="year">2018 - 2021</div>
-                <div class="content">
-                    <h3>Degree 1</h3>
-                    <p>Institution Name</p>
-                    <p>Key subjects and projects...</p>
-                </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="year">2016 - 2018</div>
-                <div class="content">
-                    <h3>Degree 2</h3>
-                    <p>Institution Name</p>
-                    <p>Key subjects and projects...</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- Experience Section -->
+    <section id="experience" class="bg-light-gray">
+        <h2 class="section-title light-theme-text dark-theme-text">>Experience</h2>
+        <ul class="experience-text light-theme-text dark-theme-text">
+            <li>Software Engineer at XYZ Company (2022 - Present)</li>
+            <li>Frontend Developer at ABC Corp (2020 - 2022)</li>
+        </ul>
+    </section>
 
+    <!-- Education Section -->
+    <section id="education" class="bg-light-gray">
+        <h2 class="section-title light-theme-text dark-theme-text">>Education</h2>
+        <p class="section-text light-theme-text dark-theme-text">Bachelor's Degree in Computer Science from University ABC (2016 - 2020)</p>
+    </section>
 
-    <section id="skills">
-    <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">
-                <i class="fab fa-js-square skill-icon"></i>
-                <p>JavaScript</p>
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light-gray">
+        <h2 class="section-title light-theme-text dark-theme-text">>Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="hover-effect">
+                <h3 class="text-xl text-black dark:text-white">Project 1</h3>
+                <p class="section-text light-theme-text dark-theme-text">Description of Project 1.</p>
             </div>
-            <div class="skill">
-                <i class="fab fa-angular skill-icon"></i>
-                <p>Angular</p>
+            <div class="hover-effect">
+                <h3 class="text-xl text-black dark:text-white">Project 2</h3>
+                <p class="section-text light-theme-text dark-theme-text">Description of Project 2.</p>
             </div>
-            <div class="skill">
-                <i class="fab fa-react skill-icon"></i>
-                <p>React</p>
+            <div class="hover-effect">
+                <h3 class="text-xl text-black dark:text-white">Project 3</h3>
+                <p class="section-text light-theme-text dark-theme-text">Description of Project 3.</p>
             </div>
-            <div class="skill">
-                <i class="fab fa-node skill-icon"></i>
-                <p>Node.js</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-camera-retro skill-icon"></i> <!-- You can add an appropriate icon here -->
-                <p>ASP.NET</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-php skill-icon"></i>
-                <p>PHP</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-database skill-icon"></i> <!-- You can use a database icon for SQL -->
-                <p>SQL</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:isuruekb@gmail.com">isuruekb@gmail.com</a></p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Isuru Bandara. All Rights Reserved.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light-gray">
+        <h2 class="section-title light-theme-text dark-theme-text">>Contact</h2>
+        <p class="section-text light-theme-text dark-theme-text">If you'd like to get in touch, feel free to <a href="mailto:your-email@example.com" class="text-blue-500 dark:text-blue-300">email me</a>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light-gray">
+        <p class="section-text light-theme-text dark-theme-text">© 2024 Isuru Bandara. Made with ♥.</p>
     </footer>
 
-    <script>
-        function toggleNav() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('show');
-        }
-
-        function toggleTheme() {
-            const theme = document.documentElement;
-            if (theme.getAttribute('data-theme') === 'dark') {
-                theme.setAttribute('data-theme', 'light');
-                document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun');
-            } else {
-                theme.setAttribute('data-theme', 'dark');
-                document.getElementById('theme-icon').classList.replace('fa-sun', 'fa-moon');
-            }
-        }
-    </script>
-
-    <script>
-    const roles = ["Software Engineer", "Software Developer", "Designer", "Frontend Developer", "Backend Developer", "Fullstack Engineer"];
-    const roleText = document.getElementById("role-text");
-    let index = 0; // Start with the first role
-    let charIndex = 0; // Start typing the first character
-
-    function type() {
-        if (charIndex < roles[index].length) {
-            roleText.textContent += roles[index].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, 100); // Adjust typing speed (100ms per character)
-        } else {
-            setTimeout(deleteText, 1000); // Pause before deleting
-        }
-    }
-
-    function deleteText() {
-        if (charIndex > 0) {
-            roleText.textContent = roles[index].substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(deleteText, 100); // Adjust deleting speed (100ms per character)
-        } else {
-            index = (index + 1) % roles.length; // Move to the next role
-            setTimeout(type, 500); // Pause before starting to type again
-        }
-    }
-
-    roleText.classList.add("typing"); // Add typing class for cursor effect
-    type(); // Start typing effect
-</script>
+    <!-- Theme Toggle and Particle JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
