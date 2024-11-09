@@ -10,41 +10,30 @@
 
         /* Navbar Styling */
         header {
-            background-color: rgba(0, 0, 0, 0.85);
+            background-color: rgba(0, 0, 0, 0);
             color: inherit;
+            transition: background-color 0.3s ease;
         }
 
-        /* Navbar Styling */
-.navbar-link {
-    position: relative;
-    display: inline-block;
-    color: inherit;
-    font-size: 1.125rem; /* Adjust the font size as necessary */
-    padding-bottom: 4px; /* Space for the border */
-    transition: border-color 0.3s ease; /* Smooth transition for the border */
-}
+        /* Add this class with JavaScript on scroll */
+        /*.scrolled {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker background when scrolled */
+        }*/
 
-/* Hover effect for navbar links */
-.navbar-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px; /* Adjust the thickness of the border */
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
 
-/* Apply the border color change on hover */
-.navbar-link:hover::after {
-    background-color: #4fd1c5; /* Teal color for the border on hover */
-}
+        .navbar-link {
+            color: inherit;
+            transition: color 0.3s ease;
+        }
 
-/* Dark mode hover effect */
-.dark .navbar-link:hover::after {
-    background-color: #4fd1c5; /* Teal color for the border on hover in dark mode */
-}
+        .navbar-link:hover,
+        .navbar-link:focus {
+            color: #007bff; /* Change this color to suit your theme */
+        }
+
+        .navbar-link.active {
+            border-bottom: 2px solid #007bff; /* Optional: underline the active link */
+        }
 
 
         /* Dark theme body */
@@ -79,7 +68,7 @@
             position: relative;
             height: 100vh;
             overflow: hidden;
-            background-color: #000;
+            background-color: transparent;
         }
 
         h1,
@@ -137,4 +126,21 @@
 
         .top-margin{
             padding-top: 100px;
+        }
+
+        /* Full-page particles background */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1; /* Ensure it stays behind other content */
+/*            pointer-events: none; /* Allow clicks through the particles */*/
+        }
+
+        /* Optional: Adjust content z-index to be above particles */
+        header, main {
+            position: relative;
+            z-index: 1;
         }

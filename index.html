@@ -9,34 +9,46 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPZ21REZ58"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RPZ21REZ58');
+    </script>
+
 </head>
 
 <body class="light">
+    <div id="particles-js"></div>
 
     <!-- Navbar Section -->
     <header class="fixed top-0 left-0 w-full p-5 flex justify-between items-center shadow z-50">
         <nav id="navbar" class="space-x-5">
-            <a href="#about" class="navbar-link text-lg text-black dark:text-white">About</a>
-            <a href="#skills" class="navbar-link text-lg text-black dark:text-white">Skills</a>
-            <a href="#experience" class="navbar-link text-lg text-black dark:text-white">Experience</a>
-            <a href="#education" class="navbar-link text-lg text-black dark:text-white">Education</a>
-            <a href="#projects" class="navbar-link text-lg text-black dark:text-white">Projects</a>
-            <a href="#contact" class="navbar-link text-lg text-black dark:text-white">Contact</a>
+            <a href="#about" class="navbar-link text-lg light-theme-text dark-theme-text">About</a>
+            <a href="#skills" class="navbar-link text-lg light-theme-text dark-theme-text">Skills</a>
+            <a href="#experience" class="navbar-link text-lg light-theme-text dark-theme-text">Experience</a>
+            <a href="#education" class="navbar-link text-lg light-theme-text dark-theme-text">Education</a>
+            <a href="#projects" class="navbar-link text-lg light-theme-text dark-theme-text">Projects</a>
+            <a href="#contact" class="navbar-link text-lg light-theme-text dark-theme-text">Contact</a>
         </nav>
-        <button id="theme-toggle" class="p-2 text-black dark:text-white">
+        <button id="theme-toggle" class="p-2 light-theme-text dark-theme-text">
             <i class="fas fa-moon"></i>
         </button>
     </header>
 
     <!-- Hero Section with Particle Effect -->
-    <section class="hero-bg flex flex-col justify-center items-center text-center relative">
-        <h1 class="text-5xl mb-2 text-white">Hello, I'm Isuru Bandara</h1>
-        <h1 class="text-4xl mb-2 text-white">Software Engineer</h1>
-        <p class="mb-5 text-white">Expert in Angular, .NET, C# and Full-stack development.</p>
-        <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover-effect">Download Resume</a>
-        <!-- Particle Effect Container -->
-        <div id="particles-js"></div>
-    </section>
+<section class="hero-bg flex flex-col justify-center items-center text-center relative">
+    <h1 class="text-5xl mb-2 light-theme-text dark-theme-text">Hello, I'm Isuru Bandara</h1>
+    <h1 class="text-4xl mb-2 light-theme-text dark-theme-text">Software Engineer</h1>
+    <p class="mb-5 light-theme-text dark-theme-text">Expert in Angular, .NET, C# and Full-stack development.</p>
+    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover-effect">Download Resume</a>
+    <!-- Particle Effect Container -->
+</section>
+
 
     <!-- About Section -->
     <section id="about" class="top-margin bg-light-gray py-10">
@@ -44,7 +56,7 @@
             <h2 class="section-title text-center light-theme-text dark-theme-text">> About Me</h2>
             <div class="flex flex-col md:flex-row items-center justify-center gap-8">
                 <!-- Photo Section -->
-                <div class="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-teal-400 to-blue-500 hover:scale-105 transition-all duration-300 ease-in-out">
+                <div class="w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-teal-400 to-blue-500 hover:scale-105 transition-all duration-300 ease-in-out">
                     <img src="https://i.imgur.com/AfG17bx.jpg" alt="Your Photo" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300 ease-in-out" />
                 </div>
                 
