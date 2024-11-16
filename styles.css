@@ -136,40 +136,35 @@ footer span {
     color: #fff; /* White text color for better visibility */
 }
 
+.light .light-theme-text {
+    color: black;
+}
 
+.dark .dark-theme-text {
+    color: white;
+}
 
-        /* Light theme text colors */
-        .light .light-theme-text {
-            color: black;
-        }
+.top-margin{
+    padding-top: 100px;
+}
 
-        /* Dark theme text colors */
-        .dark .dark-theme-text {
-            color: white;
-        }
-
-        .top-margin{
-            padding-top: 100px;
-        }
-
-        /* Full-page particles background */
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1; /* Ensure it stays behind other content */
+/* Full-page particles background */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Ensure it stays behind other content */
 /*            pointer-events: none; /* Allow clicks through the particles */*/
-        }
+}
 
-        /* Optional: Adjust content z-index to be above particles */
-        header, main {
-            position: relative;
-            z-index: 1;
-        }
+header, main {
+    position: relative;
+    z-index: 1;
+}
 
 .margintop{
-    margin-top: 100px;
+margin-top: 100px;
 }
 
