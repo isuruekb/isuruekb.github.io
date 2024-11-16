@@ -136,12 +136,13 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
     pJSDom[0].pJS.fn.particlesRefresh();
 });
 
-// Scroll event for header styling
+// Toggle the 'scrolled' class based on scroll position
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
+
     if (window.scrollY > 50) {
-        header.classList.add('scrolled');
+        header.classList.add('scrolled'); // Add 'scrolled' class when scrolling down
     } else {
-        header.classList.remove('scrolled');
+        header.classList.remove('scrolled'); // Remove 'scrolled' class when at the top
     }
 });

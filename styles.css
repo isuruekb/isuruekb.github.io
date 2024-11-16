@@ -1,42 +1,53 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+/* Body styling */
+body {
+    font-family: 'VT323', monospace;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        body {
-            font-family: 'VT323', monospace;
-            transition: background-color 0.3s, color 0.3s;
-        }
+/* Fixed Navbar Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0); /* Transparent for particles */
+    color: inherit; /* Default text color is inherited */
+    backdrop-filter: blur(5px); /* Optional blur effect */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 2; /* Ensure navbar is above the particles */
+}
 
-        /* Navbar Styling */
-        header {
-            background-color: rgba(0, 0, 0, 0);
-            color: inherit;
-            transition: background-color 0.3s ease;
-        }
+/* Navbar text color changes when scrolled */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0); /* Darker background when scrolled */
+}
 
-        /* Add this class with JavaScript on scroll */
-        /*.scrolled {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker background when scrolled */
-        }*/
+/* Navbar links */
+.navbar-link {
+    color: inherit;
+    transition: color 0.1s ease, border-bottom 0.1s ease;
+    text-decoration: none;
+    padding: 0 10px; /* Adjust spacing */
+}
 
+/* Navbar link hover effect */
+.navbar-link:hover,
+.navbar-link:focus {
+    color: #3498db; /* Blue for hover effect */
+    border-bottom: 2px solid #3498db; /* Optional underline effect */
+}
 
-        .navbar-link {
-            color: inherit;
-            transition: color 0.3s ease;
-        }
+/* Active navbar link styling */
+.navbar-link.active {
+    border-bottom: 2px solid #3498db;
+}
 
-        .navbar-link:hover,
-        .navbar-link:focus {
-            color: #007bff; /* Change this color to suit your theme */
-        }
-
-        .navbar-link.active {
-            border-bottom: 2px solid #007bff; /* Optional: underline the active link */
-        }
-
-
-        /* Dark theme body */
+/* Dark theme body */
         .dark {
             background-color: #121212;
             color: white;
@@ -78,6 +89,10 @@
             z-index: 2;
         }
 
+        p {
+            font-size: 1.2rem;
+        }
+
         .hover-effect:hover {
             transform: scale(1.05);
             transition: transform 0.3s;
@@ -94,23 +109,32 @@
             z-index: 1;
         }
 
-        footer {
-            background-color: rgba(0, 0, 0, 0.85); /* 50% transparent black background */
-            color: white !important; /* Enforces white text color */
-            padding: 30px 0;
-            text-align: center;
-        }
+        /* Footer styling */
+footer {
+    background-color: rgba(255, 255, 255, 0); /* Transparent for particles */
+    padding: 30px 0;
+    text-align: center;
+    color: inherit; /* Default text color is inherited */
+    backdrop-filter: blur(5px); /* Optional blur effect */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 2; /* Ensure footer is above particles */
+}
 
-        footer p, footer a, footer span {
-            color: white !important; /* Applies white color to all footer text elements */
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+/* Footer hover effect for links */
+footer a:hover {
+    color: #3498db; /* Hover effect for links */
+}
 
-        footer a:hover {
-            color: #3498db; /* Optional: hover color for links */
-        }
+/* Footer text color */
+footer p, footer a, footer span {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+/* Additional styling for footer text */
+footer span {
+    color: #fff; /* White text color for better visibility */
+}
 
 
 
@@ -144,3 +168,8 @@
             position: relative;
             z-index: 1;
         }
+
+.margintop{
+    margin-top: 100px;
+}
+
