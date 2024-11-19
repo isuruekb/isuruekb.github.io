@@ -146,22 +146,3 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled'); // Remove 'scrolled' class when at the top
     }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-        const downloadButton = document.getElementById("downloadButton");
-
-        // Callback function for reCAPTCHA success
-        window.onReCaptchaSuccess = function () {
-            downloadButton.disabled = false; // Enable the download button
-        };
-
-        // Handle resume download
-        downloadButton.addEventListener("click", () => {
-            if (!downloadButton.disabled) {
-                const anchor = document.createElement("a");
-                anchor.href = "assets/Isuru-Resume-2024.pdf"; // Ensure this path is correct
-                anchor.download = "Isuru-Resume-2024.pdf";
-                anchor.click();
-            }
-        });
-    });

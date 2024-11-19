@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="styles.css">
 
     <!-- Google tag (gtag.js) -->
@@ -46,16 +45,12 @@
         <h1 class="text-5xl mb-2 light-theme-text dark-theme-text">Hello, I'm Isuru Bandara</h1>
         <h1 class="text-4xl mb-2 light-theme-text dark-theme-text">Software Engineer</h1>
         <p class="mb-5 light-theme-text dark-theme-text">Expert in Angular, .NET, C# and Full-stack development.</p>
-        
-        <!-- reCAPTCHA integration -->
-        <div class="g-recaptcha mb-4" data-sitekey="6Lf52IMqAAAAAHzf7R9jlv0gqxgvG5EcBMcwwXVx" data-callback="onReCaptchaSuccess"></div>
+        <a href="assests/Isuru-Resume-2024.pdf" class="bg-blue-500 text-white py-2 px-4 rounded hover-effect" download="Isuru-Resume-2024.pdf">Download Resume</a>
 
-        <!-- Download Button -->
-        <button id="downloadButton" class="bg-blue-500 text-white py-2 px-4 rounded hover-effect" disabled>Download Resume</button>
     </section>
 
     <section id="about" class="top-margin bg-light-gray py-10">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-20 md:px-40">
             <h2 class="section-title text-center light-theme-text dark-theme-text margintop">> About Me</h2>
             <div class="flex flex-col md:flex-row items-center justify-center gap-8">
                 <!-- Photo Section -->
@@ -198,25 +193,27 @@
 <!-- Projects Section -->
 <section id="projects" class="bg-light-gray">
     <h2 class="section-title light-theme-text dark-theme-text margintop">>Projects</h2>
+    <div class="container mx-auto px-20 md:px-40">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div class="hover-effect">
+        <div class="hover-effect projects">
             <h3 class="text-xl light-theme-text dark-theme-text">Sponsorships Management System</h3>
             <p class="section-text light-theme-text dark-theme-text">
                 BIT Degree Final Year Project using Angular, NestJS, and MySQL.
             </p>
         </div>
-        <div class="hover-effect">
+        <div class="hover-effect projects">
             <h3 class="text-xl light-theme-text dark-theme-text">Exam Results Management System</h3>
             <p class="section-text light-theme-text dark-theme-text">
                 A system for managing exam results at the Faculty of Graduate Studies, University of Sri Jayewardenepura (PHP, jQuery, MySQL).
             </p>
         </div>
-        <div class="hover-effect">
+        <div class="hover-effect projects">
             <h3 class="text-xl light-theme-text dark-theme-text">Janaka Tailors - Tailor Shop Management System</h3>
             <p class="section-text light-theme-text dark-theme-text">
                 HNDIT Final Year Project using PHP, jQuery, MySQL, and JavaScript.
             </p>
         </div>
+    </div>
     </div>
 </section>
 

@@ -249,32 +249,15 @@ margin-top: 100px;
     margin-left: 30px; /* Spacing from the timeline line */
 }
 
-/* Download Button Styles */
-#downloadButton {
-    background-color: #3b82f6; /* Primary blue */
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px; /* Rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+.projects {
+    position: relative;
+    background: rgba(255, 255, 255, 0); /* Slightly more opaque for contrast */
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    margin-top: 10px; /* Add a small space between date and content */
 }
 
-#downloadButton:hover:not(:disabled) {
-    background-color: #2563eb; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight zoom-in effect */
-}
-
-#downloadButton:disabled {
-    background-color: #ccc; /* Gray for disabled state */
-    cursor: not-allowed; /* Show not-allowed cursor when disabled */
-}
-
-/* reCAPTCHA Widget Styles */
-.g-recaptcha {
-    margin: 20px auto; /* Center and add spacing around */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-}
