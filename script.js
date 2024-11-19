@@ -146,3 +146,4 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled'); // Remove 'scrolled' class when at the top
     }
 });
+
