@@ -258,9 +258,10 @@ header, main {
     padding: 0; /* Remove any extra padding */
     margin: 0; /* Remove any extra margin */
     list-style-position: inside; /* Ensure bullet points are aligned properly */
-    text-align: left; /* Align text to the left */
+    text-align: justify; /* Align text to the left */
     line-height: 24px; /* Improve readability */
     font-size: 18px;
+
 }
 
 /* Optional: Style the list */
