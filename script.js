@@ -147,3 +147,36 @@ window.addEventListener('scroll', () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("#navbar .navbar-link");
+
+    // Handle active class on scroll
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach((link) => link.classList.remove("active"));
+                    const activeLink = document.querySelector(
+                        `#navbar a[href="#${entry.target.id}"]`
+                    );
+                    activeLink?.classList.add("active");
+                }
+            });
+        },
+        {
+            root: null,
+            threshold: 0.3, // Adjust threshold if needed
+        }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    // Handle active class on click
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.forEach((lnk) => lnk.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
+});

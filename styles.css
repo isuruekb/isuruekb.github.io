@@ -48,69 +48,69 @@ header.scrolled {
 }
 
 /* Dark theme body */
-        .dark {
-            background-color: #121212;
-            color: white;
-        }
+.dark {
+    background-color: #121212;
+    color: white;
+}
 
-        /* Light theme body */
-        .light {
-            background-color: white;
-            color: black;
-        }
+/* Light theme body */
+.light {
+    background-color: white;
+    color: black;
+}
 
-        /* Section Styles */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
 
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
+.section-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
 
-        .section-text {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
+.section-text {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
 
-        /* Hero Section */
-        .hero-bg {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            background-color: transparent;
-        }
+/* Hero Section */
+.hero-bg {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+}
 
-        h1,
-        p,
-        a {
-            position: relative;
-            z-index: 2;
-        }
+h1,
+p,
+a {
+    position: relative;
+    z-index: 2;
+}
 
-        p {
-            font-size: 1.2rem;
-        }
+p {
+    font-size: 19px;
+}
 
-        .hover-effect:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s;
-        }
+.hover-effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
 
-        /* Particle effect styling */
-        #particles-js {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            z-index: 1;
-        }
+/* Particle effect styling */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
 
-        /* Footer styling */
+/* Footer styling */
 footer {
     background-color: rgba(255, 255, 255, 0); /* Transparent for particles */
     padding: 30px 0;
@@ -145,7 +145,7 @@ footer span {
     color: white;
 }
 
-.top-margin{
+.top-margin {
     padding-top: 100px;
 }
 
@@ -157,7 +157,7 @@ footer span {
     width: 100vw;
     height: 100vh;
     z-index: -1; /* Ensure it stays behind other content */
-/*            pointer-events: none; /* Allow clicks through the particles */*/
+    /* pointer-events: none; /* Allow clicks through the particles */
 }
 
 header, main {
@@ -165,8 +165,8 @@ header, main {
     z-index: 1;
 }
 
-.margintop{
-margin-top: 100px;
+.margintop {
+    margin-top: 100px;
 }
 
 .timeline {
@@ -209,7 +209,7 @@ margin-top: 100px;
     position: absolute;
     top: 50%; /* Vertically centered */
     transform: translateY(-50%); /* Center the date perfectly */
-    font-size: 14px;
+    font-size: 18px;
     color: #666;
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(5px); /* Subtle blur effect */
@@ -259,7 +259,8 @@ margin-top: 100px;
     margin: 0; /* Remove any extra margin */
     list-style-position: inside; /* Ensure bullet points are aligned properly */
     text-align: left; /* Align text to the left */
-    line-height: 1.5; /* Improve readability */
+    line-height: 24px; /* Improve readability */
+    font-size: 18px;
 }
 
 /* Optional: Style the list */
@@ -271,7 +272,6 @@ margin-top: 100px;
 .timeline-content ul li {
     margin-bottom: 8px; /* Add spacing between list items */
 }
-
 
 .projects {
     position: relative;
@@ -285,3 +285,6 @@ margin-top: 100px;
     margin-top: 10px; /* Add a small space between date and content */
 }
 
+.navbar-link.active {
+    border-bottom: 2px solid #007bff; /* Optional underline */
+}
