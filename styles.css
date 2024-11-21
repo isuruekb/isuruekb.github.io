@@ -288,3 +288,13 @@ header, main {
 .navbar-link.active {
     border-bottom: 2px solid #007bff; /* Optional underline */
 }
+
+/* Initially hide the mobile menu */
+#mobile-menu {
+    display: none;
+}
+
+/* Show the mobile menu when active */
+#mobile-menu.active {
+    display: block;
+}
